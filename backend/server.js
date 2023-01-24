@@ -13,6 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use("/books", require("./routes/bookRoutes"));
+app.use("/books/users", require("./routes/userRoutes"));
 app.use(errorHandler);
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
